@@ -1,25 +1,36 @@
 let count = 0;
 
+const countDisplay = document.getElementById('countDisplay');
+const increaseBtn = document.getElementById('increaseBtn');
+const decreaseBtn = document.getElementById('decreaseBtn');
+const resetBtn = document.getElementById('resetBtn');
+
+const updateDisplay = () => {
+  countDisplay.textContent = count;
+};
+
 const increase = () => {
   if (count < 10) {
-    count = count + 1;
+    count += 1;
+    updateDisplay();
   }
 };
+
 const decrease = () => {
   if (count > 0) {
-    count = count - 1;
+    count -= 1;
+    updateDisplay();
   }
 };
+
 const reset = () => {
   count = 0;
+  updateDisplay();
 };
-// 0=>1
-// 1=>2
-// 2=>3
-// 3=>4
-//4=>5
-// 5=>6
-// 6=>7
-// 7=>8
-// 8=>9
-// 9=>10
+
+increaseBtn.addEventListener('click', increase);
+decreaseBtn.addEventListener('click', decrease);
+resetBtn.addEventListener('click', reset);
+
+// Initialize display
+updateDisplay();

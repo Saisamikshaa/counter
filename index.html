@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>counter</title>
-    <script src="./counter.js"></script>
-    <style>
-    body {
-        background-color: linen;
-    }
-      button {
-        display: flex;
-        margin: 10px auto;
-        background-color: black;
-        color: white;
-        border-radius: 10px;
-        height: 25px;
-      }
-      
-      div {
-        height: 100vh;
-        width: 100vw;
-        background-color: rgb(247, 58, 58);
-      }
-      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <button onclick = "increase()" id="button">increase</button>
-    <button onclick = "reset()" id="button">reset</button>
-    <button onclick = "decrease()" id="button">decrease</button>
-
-    <div id="demo"></div>
+    <div class="container">
+        <h1>Counter</h1>
+        <div id="countDisplay">0</div>
+        <div class="button-group">
+            <button id="increaseBtn">Increase</button>
+            <button id="decreaseBtn">Decrease</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+    <script src="counter.js"></script>
 </body>
-
 </html>
-
